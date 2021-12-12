@@ -30,6 +30,6 @@ This image also allow to connect via ssh.
 ```
 $ aws ec2 run-instances --image-id ami-7b3db00c \
                         --count 1 \
-                        --instance-type t1.micro
+                        --instance-type t1.micro \
                         --key-name awstest
 ```
