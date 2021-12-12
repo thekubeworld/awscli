@@ -14,7 +14,7 @@ $ aws --version
 To access the instance via ssh, you need SSH key pair set up in EC2.
 Create a key pair via the CLI, copy the returned private key into a file in your
 `~/.ssh/` dir and set permissions.
-
+.23.
 ```
 $ aws ec2 create-key-pair --key-name aws
 $ vi ~/.ssh/id_rsa_aws
@@ -32,4 +32,15 @@ $ aws ec2 run-instances --image-id ami-7b3db00c \
                         --count 1 \
                         --instance-type t1.micro \
                         --key-name awstest
+```
+
+## SSH to instance
+```
+$ aws ec2 describe-instances
+$ ssh -i ~/.ssh/id_rsa_aws ec2-user@50.4.12.10
+```
+
+## Terminate instance
+```
+$ aws ec2 terminate-instances --instance-ids <ids>
 ```
