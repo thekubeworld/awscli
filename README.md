@@ -24,8 +24,12 @@ $ aws ec2 describe-key-pair
 
 
 ## Running instance
+t1.micro instance type is available via Amazon Linux AMI.
+This image also allow to connect via ssh.
+
 ```
-$ aws ec2 run-instances --image-id superimage-12300c \
+$ aws ec2 run-instances --image-id ami-7b3db00c \
                         --count 1 \
                         --instance-type t1.micro
+                        --key-name awstest
 ```
