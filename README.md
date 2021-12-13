@@ -44,3 +44,13 @@ $ ssh -i ~/.ssh/id_rsa_aws ec2-user@50.4.12.10
 ```
 $ aws ec2 terminate-instances --instance-ids <ids>
 ```
+
+
+# creatomg ecs cluster
+```
+aws ecs list-clusters
+aws ecs create-cluster
+aws ecs describe-clusters
+aws ecs list-container-instances
+aws ecs delete-cluster
+```
